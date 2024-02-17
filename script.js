@@ -5,7 +5,7 @@
 
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3 +1);
-    let computerChoice = o;
+    let computerChoice = 0;
     switch (randomNumber) {
         case 1:
             computerChoice = "rock";
@@ -29,7 +29,7 @@ function getPlayerSelection() {
         playerChoice !== "paper" &&
         playerChoice !== "scissors" 
     ) {
-        playerChoice = prompt('Choose your weapon',"rock, paper, scissors");
+        playerChoice = prompt('Choose your weapon (rock, paper, or scissors)',"");
         if (playerChoice === null) {
             return null;
         }
@@ -61,3 +61,37 @@ function playRound(playerSelection, computerSelection) {
 }
 
 //play 5 times in a row and check who win bo5
+
+function playGame() {
+    let winCounter = 0;
+    let whoWin = "Draw";
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = getPlayerSelection();
+        if (playerSelection === null) {
+            return "You cancelled the game.";
+        }
+        const computerSelection = getComputerChoice();
+        const result = playRound(playerSelection, computerSelection);
+        console.log(result);
+
+        if (result.includes("Win")) {
+            winCounter++;
+        } else if (result.includes("Lose")) {
+            winCounter--;
+        }
+    }
+    if (winCounter > 0) {
+        whoWin = "Congratulations! You win!";
+    } else if (winCounter < 0) {
+        whoWin = "You lose! >:(";
+    } else {
+        whoWin = "Draw! Try Again!";
+    }
+    return whoWin;
+}
+
+// console.log(winCounter) to check win counter;
+// Lets play some Rock, Paper, Scissors!;
+
+console.log(playGame());
+console.log(winCounter)
