@@ -70,3 +70,27 @@ const playRound = (player, computer) => {
 
     playRound(player, computer)
 }
+
+
+
+// loop for Bo5
+for (let i = 0; i <= 4; i++) {
+    game()
+
+    if (result == playerWin) {
+        playerCount += 1
+    } else if (result == computerWin) {
+        computerCount += 1
+    }
+    
+    console.log(` Player: ${playerCount} \n Computer: ${computerCount}`)
+}
+
+// alert for outcome of the game 
+if (playerCount > computerCount) {
+    alert('Congratulations, you won!')
+} else if (computerCount > playerCount){
+    alert('Sorry, computer won!')
+} else {
+    alert('Oh a tie!')
+}
