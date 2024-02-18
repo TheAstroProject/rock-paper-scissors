@@ -1,12 +1,12 @@
 //rewriting code in a different manner as I could not find a previous solution
 
 //Defining the variables that we are going to use 
-let result = null;
-let playerCount = 0;
-let computerCount = 0;
-let playerWin = 'Player wins!';
-let tie = 'You tied!';
-let computerWin = 'Computer wins!';
+let result = null
+let playerCount = 0
+let computerCount = 0
+let playerWin = 'Player wins!'
+let tie = 'You tied!'
+let computerWin = 'Computer wins!'
 
 // function that obtains the selection of the computer, player and shows who won the round
 const game = () => {
@@ -40,7 +40,7 @@ const getPlayerChoice = () => {
 }
 
 let computer = getComputerChoice()
-let player = getPlayerChoice
+let player = getPlayerChoice()
 
 // show the selection of the player, computer and round of the game 
 const playRound = (player, computer) => {
@@ -52,12 +52,14 @@ const playRound = (player, computer) => {
         result = tie
         alert(tie)
         console.log(tie)
+
     } else if ( player === 'rock' && computer === 'paper' || 
     player === 'paper' && computer === 'scissors' || 
     player === 'scissors' && computer === 'rock'){
         result = computerWin
         alert(computerWin)
         console.log(computerWin)
+        
     } else {
 
         result = playerWin
