@@ -8,7 +8,7 @@ let playerWin = 'Player wins!'
 let tie = 'You tied!'
 let computerWin = 'Computer wins!'
 
-// function that obtains the selection of the computer, player and shows who won the round
+// function that obtains the selection of the computer, and shows who won the round
 const game = () => {
 
     //computer picks a number from 1-3 (values = rock, paper, scissors)
@@ -27,7 +27,7 @@ const game = () => {
     return computerPick
 }
 
-// the player types out their choice of RPS
+// this function gets the players choice of RPS via a Prompt
 const getPlayerChoice = () => {
     let playerPick = prompt('Choice: Rock - Paper - Scissors ').toLowerCase()
 
@@ -42,7 +42,7 @@ const getPlayerChoice = () => {
 let computer = getComputerChoice()
 let player = getPlayerChoice()
 
-// show the selection of the player, computer and round of the game 
+// gets computers choice, then players choice, and returns result
 const playRound = (player, computer) => {
 
     console.log(`The computer chooses: ${computer}`)
@@ -75,7 +75,7 @@ const playRound = (player, computer) => {
 
 
 
-// loop for Bo5
+// loop for a 5 round game (not a Bo5)
 for (let i = 0; i <= 4; i++) {
     game()
 
@@ -88,7 +88,7 @@ for (let i = 0; i <= 4; i++) {
     console.log(` Player: ${playerCount} \n Computer: ${computerCount}`)
 }
 
-// alert for outcome of the game 
+// alerts you if you win, lose or tie
 if (playerCount > computerCount) {
     alert('Congratulations, you won!')
 } else if (computerCount > playerCount){
