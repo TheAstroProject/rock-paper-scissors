@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    gap: 20px;
+}
+
+p {
+    font-size: 25px;
+}
+
+#score {
+    font-size: 35;
+}
+
+#choices {
+    display: flex;
+    gap: 15px;
+}
+
+.choice {
+    font-size: 50px;
+    font-weight: 900;
+    height: 30vh;
+    width: 30vw;
+    max-height: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cursor:active {
+    background: lightgray;
+}
+
+.cursor:focus {
+    outline: blue auto 5px;
+}
+
+#result {
+    font-size: 30px;
+}
