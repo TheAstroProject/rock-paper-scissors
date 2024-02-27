@@ -4,7 +4,7 @@ let playerScore = 0;
 let computerScore = 0;
 //creates our random gen
 function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 //gets the computers random input from 1-3 and turns into output of rock, paper, scissors
 function getComputerChoice() {
@@ -18,7 +18,7 @@ function getComputerChoice() {
     }
 }
 //this function lets us play a round of rpc
-function playRound (playerSelection, computerScore) {
+function playRound (playerSelection, computerSelection) {
     score.style.color = "black";
       if (playerSelection === computerSelection) {
         resultText.style.color = "black";
