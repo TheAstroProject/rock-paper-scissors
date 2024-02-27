@@ -33,11 +33,11 @@ p {
     cursor: pointer;
 }
 
-.cursor:active {
+.choice:active {
     background: lightgray;
 }
 
-.cursor:focus {
+.choice:focus {
     outline: blue auto 5px;
 }
 
